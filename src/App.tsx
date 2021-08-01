@@ -1,23 +1,22 @@
-import './App.css';
+import { FC } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 
-import React from 'react';
+import Chart from './components/Chart';
+import Header from './components/Header';
 
-import logo from './logo.svg';
-
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row>
+        <Col xs={12}>
+          <Header className="mt-4" />
+        </Col>
+        <Col xs={12}>
+          <Chart className="mt-4" />
+        </Col>
+      </Row>
+    </Container>
   );
-}
+};
 
 export default App;
